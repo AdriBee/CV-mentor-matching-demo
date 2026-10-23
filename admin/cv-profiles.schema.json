@@ -1,0 +1,1738 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CV profile collection",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "profiles"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "profiles": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/definitions/profile"
+      }
+    }
+  },
+  "definitions": {
+    "shortText": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "longText": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 5000
+    },
+    "nullableText": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "shortList": {
+      "type": "array",
+      "uniqueItems": true,
+      "maxItems": 40,
+      "items": {
+        "$ref": "#/definitions/shortText"
+      }
+    },
+    "year": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1900,
+      "maximum": 2100
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri",
+      "pattern": "^https://",
+      "maxLength": 2000
+    },
+    "profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status",
+        "identity",
+        "research",
+        "selectedPublications",
+        "grants",
+        "mentorship",
+        "workflow",
+        "evidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "maxLength": 80
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "administrator_review",
+            "mentor_review",
+            "approved",
+            "published",
+            "rejected",
+            "needs_reprocessing",
+            "archived"
+          ]
+        },
+        "identity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "name",
+            "degrees",
+            "title",
+            "appointment",
+            "institution",
+            "email",
+            "website"
+          ],
+          "properties": {
+            "name": {
+              "$ref": "#/definitions/shortText"
+            },
+            "degrees": {
+              "$ref": "#/definitions/shortList"
+            },
+            "title": {
+              "$ref": "#/definitions/shortText"
+            },
+            "appointment": {
+              "$ref": "#/definitions/shortText"
+            },
+            "institution": {
+              "$ref": "#/definitions/shortText"
+            },
+            "email": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "email",
+              "maxLength": 254
+            },
+            "website": {
+              "$ref": "#/definitions/url"
+            }
+          }
+        },
+        "research": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "summary",
+            "areas",
+            "topics",
+            "specialties",
+            "methods"
+          ],
+          "properties": {
+            "summary": {
+              "$ref": "#/definitions/longText"
+            },
+            "areas": {
+              "type": "array",
+              "uniqueItems": true,
+              "maxItems": 4,
+              "items": {
+                "enum": [
+                  "B2B",
+                  "CGH",
+                  "E2PS",
+                  "EpiBio"
+                ]
+              }
+            },
+            "topics": {
+              "$ref": "#/definitions/shortList"
+            },
+            "specialties": {
+              "$ref": "#/definitions/shortList"
+            },
+            "methods": {
+              "$ref": "#/definitions/shortList"
+            }
+          }
+        },
+        "selectedPublications": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "authors",
+              "journal",
+              "year",
+              "doi",
+              "url"
+            ],
+            "properties": {
+              "title": {
+                "$ref": "#/definitions/shortText"
+              },
+              "authors": {
+                "$ref": "#/definitions/shortList"
+              },
+              "journal": {
+                "$ref": "#/definitions/nullableText"
+              },
+              "year": {
+                "$ref": "#/definitions/year"
+              },
+              "doi": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^10\\.[0-9]{4,9}/\\S+$",
+                "maxLength": 300
+              },
+              "url": {
+                "$ref": "#/definitions/url"
+              }
+            }
+          }
+        },
+        "grants": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "funder",
+              "role",
+              "startYear",
+              "endYear"
+            ],
+            "properties": {
+              "title": {
+                "$ref": "#/definitions/shortText"
+              },
+              "funder": {
+                "$ref": "#/definitions/nullableText"
+              },
+              "role": {
+                "$ref": "#/definitions/nullableText"
+              },
+              "startYear": {
+                "$ref": "#/definitions/year"
+              },
+              "endYear": {
+                "$ref": "#/definitions/year"
+              }
+            }
+          }
+        },
+        "mentorship": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "availability",
+            "capacity",
+            "desiredSkills",
+            "projects",
+            "protectedTime",
+            "lastConfirmedAt"
+          ],
+          "properties": {
+            "availability": {
+              "enum": [
+                null,
+                "Accepting",
+                "By Request",
+                "Closed"
+              ]
+            },
+            "capacity": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "desiredSkills": {
+              "$ref": "#/definitions/shortList"
+            },
+            "projects": {
+              "type": "array",
+              "maxItems": 20,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "summary",
+                  "commitment"
+                ],
+                "properties": {
+                  "title": {
+                    "$ref": "#/definitions/shortText"
+                  },
+                  "summary": {
+                    "$ref": "#/definitions/longText"
+                  },
+                  "commitment": {
+                    "$ref": "#/definitions/nullableText"
+                  }
+                }
+              }
+            },
+            "protectedTime": {
+              "enum": [
+                null,
+                "Available",
+                "By arrangement",
+                "Not available"
+              ]
+            },
+            "lastConfirmedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            }
+          }
+        },
+        "workflow": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "consentConfirmed",
+            "reviewedBy",
+            "reviewedAt"
+          ],
+          "properties": {
+            "consentConfirmed": {
+              "type": "boolean"
+            },
+            "reviewedBy": {
+              "$ref": "#/definitions/nullableText"
+            },
+            "reviewedAt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "sourceFile": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 180,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*\\.pdf$"
+            },
+            "sourceSha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "processedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "extractorVersion": {
+              "$ref": "#/definitions/shortText"
+            },
+            "classifierVersion": {
+              "$ref": "#/definitions/shortText"
+            },
+            "sourceType": {
+              "enum": [
+                "cv",
+                "manual",
+                "synthetic"
+              ]
+            },
+            "synthetic": {
+              "type": "boolean"
+            },
+            "approvalMethod": {
+              "enum": [
+                "automatic",
+                "manual"
+              ]
+            },
+            "approvalPolicy": {
+              "enum": [
+                "cv-auto-v1",
+                "cv-admin-v1"
+              ]
+            },
+            "publicationAuthorized": {
+              "type": "boolean"
+            },
+            "authorizedBy": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+            },
+            "approvedAt": {
+              "type": "string",
+              "format": "date"
+            }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "maxProperties": 500,
+          "propertyNames": {
+            "pattern": "^(identity|research|selectedPublications|grants|cv)(\\.[A-Za-z][A-Za-z0-9]*|\\.[0-9]+)+$"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "sourcePage",
+              "sourceText",
+              "confidence"
+            ],
+            "properties": {
+              "sourcePage": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 500
+              },
+              "sourceText": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 3000
+              },
+              "confidence": {
+                "enum": [
+                  "high",
+                  "medium",
+                  "low"
+                ]
+              }
+            }
+          }
+        },
+        "cv": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "lastUpdated",
+            "professionalSummary",
+            "education",
+            "training",
+            "appointments",
+            "licensesAndCertifications",
+            "publications",
+            "grantsAndFunding",
+            "presentations",
+            "teaching",
+            "mentoring",
+            "clinicalActivities",
+            "researchProjects",
+            "honorsAndAwards",
+            "professionalMemberships",
+            "serviceAndLeadership",
+            "editorialAndPeerReview",
+            "patentsAndIntellectualProperty",
+            "skillsAndLanguages",
+            "otherSections"
+          ],
+          "properties": {
+            "lastUpdated": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date"
+            },
+            "professionalSummary": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 10000
+            },
+            "education": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "degree",
+                  "field",
+                  "institution",
+                  "location",
+                  "startDate",
+                  "endDate",
+                  "thesis",
+                  "supervisors",
+                  "details"
+                ],
+                "properties": {
+                  "degree": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "field": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "institution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "location": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "thesis": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "supervisors": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "training": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "specialty",
+                  "institution",
+                  "location",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "type": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "specialty": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "institution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "location": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "appointments": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "department",
+                  "institution",
+                  "location",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "department": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "institution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "location": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "licensesAndCertifications": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "name",
+                  "issuer",
+                  "jurisdiction",
+                  "issuedDate",
+                  "expirationDate",
+                  "details"
+                ],
+                "properties": {
+                  "name": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "issuer": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "jurisdiction": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "issuedDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "expirationDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "publications": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "type",
+                  "title",
+                  "authors",
+                  "journalOrPublisher",
+                  "year",
+                  "volume",
+                  "issue",
+                  "pages",
+                  "doi",
+                  "url",
+                  "status",
+                  "details"
+                ],
+                "properties": {
+                  "type": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "authors": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "journalOrPublisher": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "year": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "volume": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "issue": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "pages": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "doi": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "url": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "status": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "grantsAndFunding": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "funder",
+                  "awardNumber",
+                  "role",
+                  "startDate",
+                  "endDate",
+                  "amount",
+                  "currency",
+                  "status",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "funder": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "awardNumber": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "amount": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "currency": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "status": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "presentations": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "authors",
+                  "event",
+                  "location",
+                  "date",
+                  "type",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "authors": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "event": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "location": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "date": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "type": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "teaching": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "institution",
+                  "role",
+                  "startDate",
+                  "endDate",
+                  "audience",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "institution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "audience": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "mentoring": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "program",
+                  "role",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "program": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "clinicalActivities": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "role",
+                  "specialty",
+                  "institution",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "specialty": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "institution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "researchProjects": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "role",
+                  "institution",
+                  "startDate",
+                  "endDate",
+                  "status",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "institution": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "status": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "honorsAndAwards": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "organization",
+                  "date",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "organization": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "date": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "professionalMemberships": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "organization",
+                  "role",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "organization": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "serviceAndLeadership": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "organization",
+                  "committee",
+                  "role",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "organization": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "committee": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "editorialAndPeerReview": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "journalOrOrganization",
+                  "role",
+                  "startDate",
+                  "endDate",
+                  "details"
+                ],
+                "properties": {
+                  "journalOrOrganization": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "role": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "startDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "endDate": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "patentsAndIntellectualProperty": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "title",
+                  "inventors",
+                  "identifier",
+                  "jurisdiction",
+                  "date",
+                  "status",
+                  "details"
+                ],
+                "properties": {
+                  "title": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "inventors": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "identifier": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "jurisdiction": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "date": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "status": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "skillsAndLanguages": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "category",
+                  "name",
+                  "proficiency",
+                  "details"
+                ],
+                "properties": {
+                  "category": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "name": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "proficiency": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "details": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            },
+            "otherSections": {
+              "type": "array",
+              "maxItems": 2000,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "heading",
+                  "text"
+                ],
+                "properties": {
+                  "heading": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  },
+                  "text": {
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "maxLength": 10000
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "approved",
+                  "published"
+                ]
+              }
+            }
+          },
+          "then": {
+            "anyOf": [
+              {
+                "properties": {
+                  "workflow": {
+                    "type": "object",
+                    "properties": {
+                      "consentConfirmed": {
+                        "const": true
+                      },
+                      "reviewedBy": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "reviewedAt": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "workflow": {
+                    "type": "object",
+                    "required": [
+                      "approvalMethod",
+                      "approvalPolicy",
+                      "publicationAuthorized",
+                      "authorizedBy",
+                      "approvedAt"
+                    ],
+                    "properties": {
+                      "approvalMethod": {
+                        "const": "automatic"
+                      },
+                      "approvalPolicy": {
+                        "const": "cv-auto-v1"
+                      },
+                      "publicationAuthorized": {
+                        "const": true
+                      },
+                      "authorizedBy": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+                      },
+                      "approvedAt": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "workflow": {
+                    "type": "object",
+                    "required": [
+                      "approvalMethod",
+                      "approvalPolicy",
+                      "publicationAuthorized",
+                      "authorizedBy",
+                      "approvedAt"
+                    ],
+                    "properties": {
+                      "approvalMethod": {
+                        "const": "manual"
+                      },
+                      "approvalPolicy": {
+                        "const": "cv-admin-v1"
+                      },
+                      "publicationAuthorized": {
+                        "const": true
+                      },
+                      "reviewedBy": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "reviewedAt": {
+                        "type": "string",
+                        "format": "date"
+                      },
+                      "authorizedBy": {
+                        "type": "string",
+                        "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}$"
+                      },
+                      "approvedAt": {
+                        "type": "string",
+                        "format": "date"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

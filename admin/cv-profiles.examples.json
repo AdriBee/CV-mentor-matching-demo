@@ -1,0 +1,485 @@
+{
+  "$schema": "../schemas/cv-profiles.schema.json",
+  "schemaVersion": 1,
+  "profiles": [
+    {
+      "id": "example-morgan-aster",
+      "status": "draft",
+      "identity": {
+        "name": "Morgan L. Aster",
+        "degrees": [
+          "MD"
+        ],
+        "title": "Professor of Surgery and Biomedical Informatics",
+        "appointment": "Professor of Surgery and Biomedical Informatics",
+        "institution": "Example University Medical Center",
+        "email": null,
+        "website": null
+      },
+      "research": {
+        "summary": "Fictional research in artificial intelligence and machine learning for surgical decision support, medical education, clinical informatics and predictive analytics.",
+        "areas": [
+          "E2PS",
+          "EpiBio"
+        ],
+        "topics": [
+          "Artificial intelligence",
+          "Machine learning",
+          "Surgical decision support",
+          "Medical education",
+          "Clinical informatics",
+          "Predictive analytics"
+        ],
+        "specialties": [
+          "Biomedical Informatics",
+          "Medical Education"
+        ],
+        "methods": []
+      },
+      "selectedPublications": [],
+      "grants": [],
+      "mentorship": {
+        "availability": null,
+        "capacity": null,
+        "desiredSkills": [],
+        "projects": [],
+        "protectedTime": null,
+        "lastConfirmedAt": null
+      },
+      "workflow": {
+        "sourceType": "synthetic",
+        "synthetic": true,
+        "consentConfirmed": false,
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "evidence": {
+        "identity.name": {
+          "sourcePage": 1,
+          "sourceText": "MORGAN L. ASTER",
+          "confidence": "high"
+        },
+        "identity.degrees": {
+          "sourcePage": 1,
+          "sourceText": "MD",
+          "confidence": "high"
+        },
+        "identity.title": {
+          "sourcePage": 1,
+          "sourceText": "Professor of Surgery and Biomedical Informatics",
+          "confidence": "high"
+        },
+        "identity.appointment": {
+          "sourcePage": 1,
+          "sourceText": "Professor of Surgery and Biomedical Informatics",
+          "confidence": "high"
+        },
+        "identity.institution": {
+          "sourcePage": 1,
+          "sourceText": "Example University Medical Center",
+          "confidence": "high"
+        },
+        "cv.appointments.0.title": {
+          "sourcePage": 1,
+          "sourceText": "Professor of Surgery and Biomedical Informatics",
+          "confidence": "high"
+        },
+        "cv.appointments.0.institution": {
+          "sourcePage": 1,
+          "sourceText": "Example University Medical Center",
+          "confidence": "high"
+        },
+        "research.areas": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support using fictional\ntest data.\n- Medical education research evaluates simulated training programs and synthetic\nassessment datasets.\n- Clinical informatics and predictive analytics support reproducible testing with invented\npatient records.",
+          "confidence": "medium"
+        },
+        "research.specialties": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support using fictional\ntest data.\n- Medical education research evaluates simulated training programs and synthetic\nassessment datasets.\n- Clinical informatics and predictive analytics support reproducible testing with invented\npatient records.",
+          "confidence": "medium"
+        },
+        "research.topics": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support using fictional\ntest data.\n- Medical education research evaluates simulated training programs and synthetic\nassessment datasets.\n- Clinical informatics and predictive analytics support reproducible testing with invented\npatient records.",
+          "confidence": "medium"
+        },
+        "research.summary": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support using fictional\ntest data.\n- Medical education research evaluates simulated training programs and synthetic\nassessment datasets.\n- Clinical informatics and predictive analytics support reproducible testing with invented\npatient records.",
+          "confidence": "medium"
+        },
+        "cv.professionalSummary": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support using fictional\ntest data.\n- Medical education research evaluates simulated training programs and synthetic\nassessment datasets.\n- Clinical informatics and predictive analytics support reproducible testing with invented\npatient records.",
+          "confidence": "medium"
+        }
+      },
+      "cv": {
+        "lastUpdated": null,
+        "professionalSummary": "Fictional research in artificial intelligence and machine learning for surgical decision support, medical education, clinical informatics and predictive analytics.",
+        "education": [],
+        "training": [],
+        "appointments": [
+          {
+            "title": "Professor of Surgery and Biomedical Informatics",
+            "department": null,
+            "institution": "Example University Medical Center",
+            "location": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "licensesAndCertifications": [],
+        "publications": [],
+        "grantsAndFunding": [],
+        "presentations": [],
+        "teaching": [],
+        "mentoring": [],
+        "clinicalActivities": [],
+        "researchProjects": [],
+        "honorsAndAwards": [],
+        "professionalMemberships": [],
+        "serviceAndLeadership": [],
+        "editorialAndPeerReview": [],
+        "patentsAndIntellectualProperty": [],
+        "skillsAndLanguages": [],
+        "otherSections": [
+          {
+            "heading": "Complete fictional source CV text (page 1)",
+            "text": "Synthetic testing only | Research Mentor Discovery\n1\nMORGAN L. ASTER, MD\nProfessor of Surgery and Biomedical Informatics\nExample University Medical Center\nFictional test CV \u2014 no real person\nRESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support using fictional\ntest data.\n- Medical education research evaluates simulated training programs and synthetic\nassessment datasets.\n- Clinical informatics and predictive analytics support reproducible testing with invented\npatient records.\nTEST DOCUMENT NOTES\nCreated solely to test the Research Mentor Discovery CV upload pipeline. This document\nrepresents an invented person and institution. All research descriptions are fictional test\ndata.\nNo real contact details, publications, grants, clinical records, or mentorship\ncommitments are included."
+          }
+        ]
+      }
+    },
+    {
+      "id": "example-jordan-vale",
+      "status": "draft",
+      "identity": {
+        "name": "Jordan M. Vale",
+        "degrees": [
+          "MD",
+          "FACS"
+        ],
+        "title": "Professor of Surgery and Biomedical Informatics",
+        "appointment": "Professor of Surgery and Biomedical Informatics",
+        "institution": "Example University Medical Center",
+        "email": "jordan.vale@example.invalid",
+        "website": "https://example.invalid/faculty/jordan"
+      },
+      "research": {
+        "summary": "Fictional research in artificial intelligence and machine learning for surgical decision support, medical education, clinical informatics and predictive analytics.",
+        "areas": [
+          "E2PS",
+          "EpiBio"
+        ],
+        "topics": [
+          "Artificial intelligence",
+          "Machine learning",
+          "Surgical decision support",
+          "Medical education",
+          "Clinical informatics",
+          "Predictive analytics"
+        ],
+        "specialties": [
+          "Biomedical Informatics",
+          "Medical Education"
+        ],
+        "methods": [
+          "Regression analysis",
+          "Clinical simulation"
+        ]
+      },
+      "selectedPublications": [
+        {
+          "title": "EVALUATING A FICTIONAL CLINICAL TRAINING PROGRAM",
+          "authors": [
+            "Vale, J. M.",
+            "Example, A."
+          ],
+          "journal": "Fictional Education Journal",
+          "year": 2025,
+          "doi": "10.1234/fictional.2025",
+          "url": "https://example.invalid/publications/one"
+        }
+      ],
+      "grants": [
+        {
+          "title": "A fictional training study",
+          "funder": "Example Research Foundation",
+          "role": "Principal investigator",
+          "startYear": 2024,
+          "endYear": 2026
+        }
+      ],
+      "mentorship": {
+        "availability": null,
+        "capacity": null,
+        "desiredSkills": [],
+        "projects": [],
+        "protectedTime": null,
+        "lastConfirmedAt": null
+      },
+      "workflow": {
+        "sourceType": "synthetic",
+        "synthetic": true,
+        "consentConfirmed": false,
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "evidence": {
+        "identity.name": {
+          "sourcePage": 1,
+          "sourceText": "JORDAN M. VALE",
+          "confidence": "high"
+        },
+        "identity.degrees": {
+          "sourcePage": 1,
+          "sourceText": "MD, FACS",
+          "confidence": "high"
+        },
+        "identity.title": {
+          "sourcePage": 1,
+          "sourceText": "Professor of Surgery and Biomedical Informatics",
+          "confidence": "high"
+        },
+        "identity.appointment": {
+          "sourcePage": 1,
+          "sourceText": "Professor of Surgery and Biomedical Informatics",
+          "confidence": "high"
+        },
+        "identity.institution": {
+          "sourcePage": 1,
+          "sourceText": "Example University Medical Center",
+          "confidence": "high"
+        },
+        "cv.appointments.0.title": {
+          "sourcePage": 1,
+          "sourceText": "Professor of Surgery and Biomedical Informatics",
+          "confidence": "high"
+        },
+        "cv.appointments.0.institution": {
+          "sourcePage": 1,
+          "sourceText": "Example University Medical Center",
+          "confidence": "high"
+        },
+        "research.areas": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support and clinical practice.\n- Medical education research investigates effective assessment of clinical training and professional learning.\n- Predictive analytics and clinical informatics support rigorous evaluation of digital health technologies.",
+          "confidence": "medium"
+        },
+        "research.specialties": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support and clinical practice.\n- Medical education research investigates effective assessment of clinical training and professional learning.\n- Predictive analytics and clinical informatics support rigorous evaluation of digital health technologies.",
+          "confidence": "medium"
+        },
+        "research.topics": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support and clinical practice.\n- Medical education research investigates effective assessment of clinical training and professional learning.\n- Predictive analytics and clinical informatics support rigorous evaluation of digital health technologies.",
+          "confidence": "medium"
+        },
+        "research.summary": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support and clinical practice.\n- Medical education research investigates effective assessment of clinical training and professional learning.\n- Predictive analytics and clinical informatics support rigorous evaluation of digital health technologies.",
+          "confidence": "medium"
+        },
+        "cv.professionalSummary": {
+          "sourcePage": 1,
+          "sourceText": "RESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support and clinical practice.\n- Medical education research investigates effective assessment of clinical training and professional learning.\n- Predictive analytics and clinical informatics support rigorous evaluation of digital health technologies.",
+          "confidence": "medium"
+        },
+        "identity.email": {
+          "sourcePage": 1,
+          "sourceText": "jordan.vale@example.invalid",
+          "confidence": "high"
+        },
+        "identity.website": {
+          "sourcePage": 1,
+          "sourceText": "https://example.invalid/faculty/jordan",
+          "confidence": "high"
+        },
+        "research.methods": {
+          "sourcePage": 1,
+          "sourceText": "Methods: Regression analysis; Clinical simulation",
+          "confidence": "high"
+        },
+        "selectedPublications.0.title": {
+          "sourcePage": 1,
+          "sourceText": "EVALUATING A FICTIONAL CLINICAL TRAINING PROGRAM",
+          "confidence": "high"
+        },
+        "selectedPublications.0.authors": {
+          "sourcePage": 1,
+          "sourceText": "Vale, J. M.; Example, A.",
+          "confidence": "high"
+        },
+        "selectedPublications.0.journal": {
+          "sourcePage": 1,
+          "sourceText": "Fictional Education Journal",
+          "confidence": "high"
+        },
+        "selectedPublications.0.year": {
+          "sourcePage": 1,
+          "sourceText": "2025",
+          "confidence": "high"
+        },
+        "selectedPublications.0.doi": {
+          "sourcePage": 1,
+          "sourceText": "10.1234/fictional.2025",
+          "confidence": "high"
+        },
+        "selectedPublications.0.url": {
+          "sourcePage": 1,
+          "sourceText": "https://example.invalid/publications/one",
+          "confidence": "high"
+        },
+        "cv.publications.0.title": {
+          "sourcePage": 1,
+          "sourceText": "EVALUATING A FICTIONAL CLINICAL TRAINING PROGRAM",
+          "confidence": "high"
+        },
+        "cv.publications.0.authors": {
+          "sourcePage": 1,
+          "sourceText": "Vale, J. M.; Example, A.",
+          "confidence": "high"
+        },
+        "cv.publications.0.journalOrPublisher": {
+          "sourcePage": 1,
+          "sourceText": "Fictional Education Journal",
+          "confidence": "high"
+        },
+        "cv.publications.0.year": {
+          "sourcePage": 1,
+          "sourceText": "2025",
+          "confidence": "high"
+        },
+        "cv.publications.0.doi": {
+          "sourcePage": 1,
+          "sourceText": "10.1234/fictional.2025",
+          "confidence": "high"
+        },
+        "cv.publications.0.url": {
+          "sourcePage": 1,
+          "sourceText": "https://example.invalid/publications/one",
+          "confidence": "high"
+        },
+        "grants.0.title": {
+          "sourcePage": 1,
+          "sourceText": "A fictional training study",
+          "confidence": "high"
+        },
+        "grants.0.funder": {
+          "sourcePage": 1,
+          "sourceText": "Example Research Foundation",
+          "confidence": "high"
+        },
+        "grants.0.role": {
+          "sourcePage": 1,
+          "sourceText": "Principal investigator",
+          "confidence": "high"
+        },
+        "grants.0.startYear": {
+          "sourcePage": 1,
+          "sourceText": "2024",
+          "confidence": "high"
+        },
+        "grants.0.endYear": {
+          "sourcePage": 1,
+          "sourceText": "2026",
+          "confidence": "high"
+        },
+        "cv.grantsAndFunding.0.title": {
+          "sourcePage": 1,
+          "sourceText": "A fictional training study",
+          "confidence": "high"
+        },
+        "cv.grantsAndFunding.0.funder": {
+          "sourcePage": 1,
+          "sourceText": "Example Research Foundation",
+          "confidence": "high"
+        },
+        "cv.grantsAndFunding.0.role": {
+          "sourcePage": 1,
+          "sourceText": "Principal investigator",
+          "confidence": "high"
+        },
+        "cv.grantsAndFunding.0.startDate": {
+          "sourcePage": 1,
+          "sourceText": "2024",
+          "confidence": "high"
+        },
+        "cv.grantsAndFunding.0.endDate": {
+          "sourcePage": 1,
+          "sourceText": "2026",
+          "confidence": "high"
+        }
+      },
+      "cv": {
+        "lastUpdated": null,
+        "professionalSummary": "Fictional research in artificial intelligence and machine learning for surgical decision support, medical education, clinical informatics and predictive analytics.",
+        "education": [],
+        "training": [],
+        "appointments": [
+          {
+            "title": "Professor of Surgery and Biomedical Informatics",
+            "department": null,
+            "institution": "Example University Medical Center",
+            "location": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "licensesAndCertifications": [],
+        "publications": [
+          {
+            "type": null,
+            "title": "EVALUATING A FICTIONAL CLINICAL TRAINING PROGRAM",
+            "authors": "Vale, J. M.; Example, A.",
+            "journalOrPublisher": "Fictional Education Journal",
+            "year": "2025",
+            "volume": null,
+            "issue": null,
+            "pages": null,
+            "doi": "10.1234/fictional.2025",
+            "url": "https://example.invalid/publications/one",
+            "status": null,
+            "details": null
+          }
+        ],
+        "grantsAndFunding": [
+          {
+            "title": "A fictional training study",
+            "funder": "Example Research Foundation",
+            "awardNumber": null,
+            "role": "Principal investigator",
+            "startDate": "2024",
+            "endDate": "2026",
+            "amount": null,
+            "currency": null,
+            "status": null,
+            "details": null
+          }
+        ],
+        "presentations": [],
+        "teaching": [],
+        "mentoring": [],
+        "clinicalActivities": [],
+        "researchProjects": [],
+        "honorsAndAwards": [],
+        "professionalMemberships": [],
+        "serviceAndLeadership": [],
+        "editorialAndPeerReview": [],
+        "patentsAndIntellectualProperty": [],
+        "skillsAndLanguages": [],
+        "otherSections": [
+          {
+            "heading": "Complete fictional source CV text (page 1)",
+            "text": "JORDAN M. VALE, MD, FACS\nCurriculum Vitae\nProfessor of Surgery and Biomedical Informatics\nExample University Medical Center\n\nRESEARCH INTERESTS\n- Artificial intelligence and machine learning for surgical decision support and clinical practice.\n- Medical education research investigates effective assessment of clinical training and professional learning.\n- Predictive analytics and clinical informatics support rigorous evaluation of digital health technologies.\n\nRESEARCH METHODS\nMethods: Regression analysis; Clinical simulation\n\nSELECTED PUBLICATIONS\n1. TITLE:  EVALUATING A FICTIONAL CLINICAL TRAINING PROGRAM\nAuthors: Vale, J. M.; Example, A.\nJournal: Fictional Education Journal\nYear: 2025\nDOI: 10.1234/fictional.2025\nURL: https://example.invalid/publications/one\n\nGRANTS\nGrant: A fictional training study\nFunding agency: Example Research Foundation\nRole: Principal investigator\nStart year: 2024\nEnd year: 2026\n\nCONTACT\nProfessional email: jordan.vale@example.invalid\nFaculty profile: https://example.invalid/faculty/jordan"
+          }
+        ]
+      }
+    }
+  ]
+}

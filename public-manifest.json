@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "mentorCount": 1,
+  "files": [
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "404.html",
+      "sha256": "9536397833988fef836bda6d11fbe6555f520ac78b0f30d72cd9582b54f7533a"
+    },
+    {
+      "path": "about/index.html",
+      "sha256": "c16e2c32f1acdbefe542660e297dde5f8321678ecc6e5526a85ecfb0a80d89c8"
+    },
+    {
+      "path": "admin/cv-profiles.examples.json",
+      "sha256": "aaa2bfbf6fd74073a6f0c4417b03c8d79b5e50cfe6ba7955f2673f0ca6d943ca"
+    },
+    {
+      "path": "admin/cv-profiles.schema.json",
+      "sha256": "9327e841cfe7d5458b25cba8a9cef2add92c24ae652c16c760bfdda55ccfdac6"
+    },
+    {
+      "path": "admin/cv-profiles.template.json",
+      "sha256": "22f4778c9e5c7a7d4fd8d1324fb934f80728a91dc0bf109597523183002f8664"
+    },
+    {
+      "path": "admin/index.html",
+      "sha256": "f9821fba040998fc2e5c8f6b4d2d23d64c2090449ad93d7bc4680b477e8b3d6c"
+    },
+    {
+      "path": "assets/app.js",
+      "sha256": "139e1066183d0ccaf0362571a747a8a5f492d7e3efa1fca105491df2eec322a2"
+    },
+    {
+      "path": "assets/fuse.mjs",
+      "sha256": "cfb7f9c5b0572b6db1900633c5d573f6ef7885e5ac2adccc99ae757b38cbbf1f"
+    },
+    {
+      "path": "assets/search.js",
+      "sha256": "5fde4d356bbe3c09a280b1b8e42bdbd2c4538dc3632392ead33f208b686db3ef"
+    },
+    {
+      "path": "assets/styles.css",
+      "sha256": "876b9073c84a82c94706401432197ca7437474048fd1c384f1d2a1e3c266f8c2"
+    },
+    {
+      "path": "dashboard/index.html",
+      "sha256": "dc4b33eb1fe0b2a9217b4d6ba3adcf33d6c5480d4b4feaccd906b7e4c15f783b"
+    },
+    {
+      "path": "data/dashboard.json",
+      "sha256": "a28be0d0a7bc68ce208ac9110dcb2c86ebec72f6263ceb875212de424ccc64ce"
+    },
+    {
+      "path": "data/mentors.csv",
+      "sha256": "26d579d66d7b3fe9c4c73992c47603cce7c83cbdf7cbac43a725816b447e536a"
+    },
+    {
+      "path": "data/mentors.public.json",
+      "sha256": "9e1f03183f96df6f462f04a4b81cfa9218667ab56a0f22fdc8ff212a3c7aa03d"
+    },
+    {
+      "path": "data/taxonomy.json",
+      "sha256": "254a21614d6e4e43ecefb12bdf7a148ef77ec627fe1ff868854799abefe5e4da"
+    },
+    {
+      "path": "index.html",
+      "sha256": "10b0eb0806aa185f38fab9bc07b0a1e5fbc53204079ebad9cc56cdbbaf8f18be"
+    },
+    {
+      "path": "mentors/cv-6692dc07d65587d556b8/index.html",
+      "sha256": "f636a69ee9878a51478c7a2226c0e07f2c1db4d5a47d158a753f1398de4f6162"
+    },
+    {
+      "path": "mentors/index.html",
+      "sha256": "3d9bc9a2708e1adf1984c2081dd24650ec7f20d51093b257064bd9e061aa1cfe"
+    }
+  ]
+}

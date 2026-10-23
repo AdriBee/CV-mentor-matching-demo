@@ -1,0 +1,53 @@
+{
+  "totalMentors": 1,
+  "acceptingMentors": 0,
+  "openProjects": 0,
+  "institutions": 1,
+  "byArea": [
+    {
+      "id": "B2B",
+      "label": "Bench-to-Bedside",
+      "count": 1
+    },
+    {
+      "id": "CGH",
+      "label": "Community & Global Health",
+      "count": 0
+    },
+    {
+      "id": "E2PS",
+      "label": "Ethics, Education, Policy & Society",
+      "count": 1
+    },
+    {
+      "id": "EpiBio",
+      "label": "Epidemiology & Biomedical Informatics",
+      "count": 1
+    }
+  ],
+  "byAvailability": [
+    {
+      "label": "Accepting",
+      "count": 0
+    },
+    {
+      "label": "By Request",
+      "count": 0
+    },
+    {
+      "label": "Closed",
+      "count": 0
+    },
+    {
+      "label": "Not confirmed",
+      "count": 1
+    }
+  ],
+  "byInstitution": [
+    {
+      "label": "Vanderbilt University Medical Center",
+      "count": 1
+    }
+  ],
+  "lastConfirmedAt": null
+}

@@ -1,0 +1,236 @@
+[
+  {
+    "id": "cv-6692dc07d65587d556b8",
+    "identity": {
+      "name": "Kevin W. Sexton",
+      "degrees": [
+        "MD",
+        "FACS"
+      ],
+      "title": "Professor of Surgery and Biomedical Informatics",
+      "appointment": "Vice Chair for Innovation, Section of Surgical Sciences; Helen and Nicholas Abumrad Directorship; Director, KEV.AI Lab",
+      "institution": "Vanderbilt University Medical Center",
+      "email": "kevin.sexton@vumc.org",
+      "website": null
+    },
+    "research": {
+      "summary": "Surgeon-scientist and clinical informaticist focused on clinical artificial intelligence, predictive analytics, digital health implementation, medical education, surgical innovation, clinical decision support, and physiologic waveform analysis in trauma and acute care settings.",
+      "areas": [
+        "B2B",
+        "E2PS",
+        "EpiBio"
+      ],
+      "topics": [
+        "Clinical artificial intelligence",
+        "Predictive analytics",
+        "Digital health implementation",
+        "Medical education",
+        "Surgical innovation",
+        "Clinical decision support",
+        "Physiologic waveform analysis",
+        "Trauma surgery",
+        "Acute care surgery"
+      ],
+      "specialties": [
+        "Biomedical Informatics"
+      ],
+      "methods": [
+        "Predictive analytics",
+        "Clinical decision support",
+        "Digital health implementation",
+        "Physiologic waveform analysis"
+      ]
+    },
+    "selectedPublications": [
+      {
+        "title": "Artificial Intelligence in Everyday Surgical Practice: A Practical Review",
+        "authors": [
+          "Jones LS",
+          "Holmes HM",
+          "Mao Z",
+          "Pasquariello LD",
+          "Eckert C",
+          "Sexton KW"
+        ],
+        "journal": "The American Surgeon",
+        "year": 2026,
+        "doi": "10.1177/00031348261468303",
+        "url": null
+      },
+      {
+        "title": "Improving Surgical Innovation: A Cross-Sectional Survey of Perceived Facilitators and Barriers",
+        "authors": [
+          "Baker CR",
+          "Appelt J",
+          "Villafranca AA",
+          "Eckert CM",
+          "Sexton KW"
+        ],
+        "journal": "World Journal of Surgery",
+        "year": 2026,
+        "doi": "10.1002/wjs.70315",
+        "url": null
+      },
+      {
+        "title": "Race Is an Incomplete Surrogate for Skin Pigmentation in Neonates, with Potential Relevance for Pulse Oximetry",
+        "authors": [
+          "Sharma M",
+          "Brown AW",
+          "Chung S",
+          "Sexton KW",
+          "Schootman M",
+          "Mourani PM"
+        ],
+        "journal": "Journal of Pediatrics",
+        "year": 2025,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "Intensive Care Unit Readmissions in a Level I Trauma Center",
+        "authors": [
+          "Moore B",
+          "Daniels KJ",
+          "Martinez B",
+          "Sexton KW",
+          "Kalkwarf KJ",
+          "Roberts M",
+          "Bowman SM",
+          "Jensen HK"
+        ],
+        "journal": "Journal of Surgical Research",
+        "year": 2025,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "The Representational Challenge of Integration and Interoperability in Transformed Health Ecosystems",
+        "authors": [
+          "Blobel B",
+          "Oemig F",
+          "Ruotsalainen P",
+          "Brochhausen M",
+          "Sexton KW",
+          "Giacomini M"
+        ],
+        "journal": "Journal of Personalized Medicine",
+        "year": 2024,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "Expanding the Ontology of Organizational Structures of Trauma Centers and Trauma Systems",
+        "authors": [
+          "Mehta D",
+          "Whorton JM",
+          "Shahriari R",
+          "Ragan ED",
+          "Bona JP",
+          "Hogan WR",
+          "Sexton KW",
+          "Brochhausen M"
+        ],
+        "journal": "International Conference on Biomedical Ontology",
+        "year": 2024,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "Development and validation of the early warning system scores ontology",
+        "authors": [
+          "Zayas CE",
+          "Whorton JM",
+          "Sexton KW",
+          "Mabry CD",
+          "Dowland SC",
+          "Brochhausen M"
+        ],
+        "journal": "Journal of Biomedical Semantics",
+        "year": 2023,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "Modeling peripheral arterial and venous pressure signals with integral pulse frequency modulation",
+        "authors": [
+          "Hayat MA",
+          "Wu J",
+          "Stephens S",
+          "Jensen H",
+          "Villafranca AA",
+          "Sanford J",
+          "Sexton KW",
+          "Jensen MO"
+        ],
+        "journal": "Biomedical Signal Processing and Control",
+        "year": 2023,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "Assessing the Need for Semantic Data Integration for Surgical Biobanks - A Knowledge Representation Perspective",
+        "authors": [
+          "Brochhausen M",
+          "Whorton JM",
+          "Zayas CE",
+          "et al."
+        ],
+        "journal": "Journal of Personalized Medicine",
+        "year": 2022,
+        "doi": null,
+        "url": null
+      },
+      {
+        "title": "Critical Information from High Fidelity Arterial and Venous Pressure Waveforms During Anesthesia and Hemorrhage",
+        "authors": [
+          "Crimmins-Pierce LD",
+          "Bonvillain GP",
+          "Henry KR",
+          "et al."
+        ],
+        "journal": "Cardiovascular Engineering and Technology",
+        "year": 2022,
+        "doi": null,
+        "url": null
+      }
+    ],
+    "grants": [
+      {
+        "title": "Democratized, AI-Guided Chart Abstraction Platform",
+        "funder": "ARPA-H",
+        "role": "Co-Investigator",
+        "startYear": null,
+        "endYear": null
+      },
+      {
+        "title": "Trauma Institutional Priorities and Teams for Outcome Efficacy",
+        "funder": "NIH/NIGMS",
+        "role": "Multiple Principal Investigator",
+        "startYear": null,
+        "endYear": null
+      },
+      {
+        "title": "Health Sciences Innovation & Entrepreneurship Training Program",
+        "funder": "NIH/NCATS",
+        "role": "Principal Investigator",
+        "startYear": null,
+        "endYear": null
+      },
+      {
+        "title": "Arkansas Collaborative for Technological and Innovative Venture Equality (ACTIVE)",
+        "funder": "U.S. Department of Commerce",
+        "role": "Principal Investigator",
+        "startYear": null,
+        "endYear": null
+      }
+    ],
+    "mentorship": {
+      "availability": null,
+      "capacity": null,
+      "desiredSkills": [],
+      "projects": [],
+      "protectedTime": null,
+      "lastConfirmedAt": null
+    }
+  }
+]

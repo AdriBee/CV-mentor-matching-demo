@@ -1,0 +1,259 @@
+{
+  "$schema": "../schemas/cv-profiles.schema.json",
+  "schemaVersion": 1,
+  "profiles": [
+    {
+      "id": "replace-with-unique-researcher-id",
+      "status": "draft",
+      "identity": {
+        "name": "Requires administrator entry",
+        "degrees": [],
+        "title": "Requires administrator entry",
+        "appointment": "Requires administrator entry",
+        "institution": "Requires administrator entry",
+        "email": null,
+        "website": null
+      },
+      "research": {
+        "summary": "Requires administrator entry",
+        "areas": [],
+        "topics": [],
+        "specialties": [],
+        "methods": []
+      },
+      "selectedPublications": [
+        {
+          "title": "Requires administrator entry",
+          "authors": [],
+          "journal": null,
+          "year": null,
+          "doi": null,
+          "url": null
+        }
+      ],
+      "grants": [
+        {
+          "title": "Requires administrator entry",
+          "funder": null,
+          "role": null,
+          "startYear": null,
+          "endYear": null
+        }
+      ],
+      "mentorship": {
+        "availability": null,
+        "capacity": null,
+        "desiredSkills": [],
+        "projects": [
+          {
+            "title": "Requires administrator entry",
+            "summary": "Requires administrator entry",
+            "commitment": null
+          }
+        ],
+        "protectedTime": null,
+        "lastConfirmedAt": null
+      },
+      "workflow": {
+        "sourceType": "manual",
+        "synthetic": false,
+        "consentConfirmed": false,
+        "reviewedBy": null,
+        "reviewedAt": null
+      },
+      "evidence": {},
+      "cv": {
+        "lastUpdated": null,
+        "professionalSummary": null,
+        "education": [
+          {
+            "degree": null,
+            "field": null,
+            "institution": null,
+            "location": null,
+            "startDate": null,
+            "endDate": null,
+            "thesis": null,
+            "supervisors": null,
+            "details": null
+          }
+        ],
+        "training": [
+          {
+            "type": null,
+            "specialty": null,
+            "institution": null,
+            "location": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "appointments": [
+          {
+            "title": null,
+            "department": null,
+            "institution": null,
+            "location": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "licensesAndCertifications": [
+          {
+            "name": null,
+            "issuer": null,
+            "jurisdiction": null,
+            "issuedDate": null,
+            "expirationDate": null,
+            "details": null
+          }
+        ],
+        "publications": [
+          {
+            "type": null,
+            "title": null,
+            "authors": null,
+            "journalOrPublisher": null,
+            "year": null,
+            "volume": null,
+            "issue": null,
+            "pages": null,
+            "doi": null,
+            "url": null,
+            "status": null,
+            "details": null
+          }
+        ],
+        "grantsAndFunding": [
+          {
+            "title": null,
+            "funder": null,
+            "awardNumber": null,
+            "role": null,
+            "startDate": null,
+            "endDate": null,
+            "amount": null,
+            "currency": null,
+            "status": null,
+            "details": null
+          }
+        ],
+        "presentations": [
+          {
+            "title": null,
+            "authors": null,
+            "event": null,
+            "location": null,
+            "date": null,
+            "type": null,
+            "details": null
+          }
+        ],
+        "teaching": [
+          {
+            "title": null,
+            "institution": null,
+            "role": null,
+            "startDate": null,
+            "endDate": null,
+            "audience": null,
+            "details": null
+          }
+        ],
+        "mentoring": [
+          {
+            "program": null,
+            "role": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "clinicalActivities": [
+          {
+            "role": null,
+            "specialty": null,
+            "institution": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "researchProjects": [
+          {
+            "title": null,
+            "role": null,
+            "institution": null,
+            "startDate": null,
+            "endDate": null,
+            "status": null,
+            "details": null
+          }
+        ],
+        "honorsAndAwards": [
+          {
+            "title": null,
+            "organization": null,
+            "date": null,
+            "details": null
+          }
+        ],
+        "professionalMemberships": [
+          {
+            "organization": null,
+            "role": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "serviceAndLeadership": [
+          {
+            "organization": null,
+            "committee": null,
+            "role": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "editorialAndPeerReview": [
+          {
+            "journalOrOrganization": null,
+            "role": null,
+            "startDate": null,
+            "endDate": null,
+            "details": null
+          }
+        ],
+        "patentsAndIntellectualProperty": [
+          {
+            "title": null,
+            "inventors": null,
+            "identifier": null,
+            "jurisdiction": null,
+            "date": null,
+            "status": null,
+            "details": null
+          }
+        ],
+        "skillsAndLanguages": [
+          {
+            "category": null,
+            "name": null,
+            "proficiency": null,
+            "details": null
+          }
+        ],
+        "otherSections": [
+          {
+            "heading": null,
+            "text": null
+          }
+        ]
+      }
+    }
+  ]
+}

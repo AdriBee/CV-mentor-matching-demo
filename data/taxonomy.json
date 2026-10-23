@@ -1,0 +1,54 @@
+{
+  "researchAreas": [
+    {
+      "id": "B2B",
+      "label": "Bench-to-Bedside",
+      "description": "Connect discoveries in the lab with better care."
+    },
+    {
+      "id": "CGH",
+      "label": "Community & Global Health",
+      "description": "Improve health with communities, locally and globally."
+    },
+    {
+      "id": "E2PS",
+      "label": "Ethics, Education, Policy & Society",
+      "description": "Explore the people, principles and systems shaping medicine."
+    },
+    {
+      "id": "EpiBio",
+      "label": "Epidemiology & Biomedical Informatics",
+      "description": "Use populations and data to answer important health questions."
+    }
+  ],
+  "specialties": [
+    "Biomedical Informatics",
+    "Cardiology",
+    "Epidemiology",
+    "Global Health",
+    "Health Policy",
+    "Medical Education",
+    "Neurology",
+    "Pediatrics",
+    "Public Health"
+  ],
+  "skills": [
+    "Cell culture",
+    "Clinical imaging",
+    "Community engagement",
+    "Data visualization",
+    "Epidemiology",
+    "Geospatial analysis",
+    "Interviews",
+    "Literature review",
+    "Machine learning",
+    "Outcomes research",
+    "Policy analysis",
+    "Python",
+    "Qualitative analysis",
+    "R",
+    "Statistical analysis",
+    "Study design",
+    "Survey design"
+  ]
+}
