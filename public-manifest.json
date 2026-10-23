@@ -56,27 +56,27 @@
     },
     {
       "path": "data/mentors.csv",
-      "sha256": "26d579d66d7b3fe9c4c73992c47603cce7c83cbdf7cbac43a725816b447e536a"
+      "sha256": "c71084485d35bc96ef597221a79af971cdedc26d50fb92d5ed99c27a1afdc5c1"
     },
     {
       "path": "data/mentors.public.json",
-      "sha256": "9e1f03183f96df6f462f04a4b81cfa9218667ab56a0f22fdc8ff212a3c7aa03d"
+      "sha256": "9e952fd00e76d1afe70ef4aa0cc8af9f4053e29e334f270b9713fd00cc3c2c93"
     },
     {
       "path": "data/taxonomy.json",
-      "sha256": "254a21614d6e4e43ecefb12bdf7a148ef77ec627fe1ff868854799abefe5e4da"
+      "sha256": "62011350b80025ef322ec9efe4703d7c191519603e45865ae9dabef049909e35"
     },
     {
       "path": "index.html",
-      "sha256": "10b0eb0806aa185f38fab9bc07b0a1e5fbc53204079ebad9cc56cdbbaf8f18be"
+      "sha256": "a919746ddfef8e8b8d0aa15a849dc7ff4ab52ffecb96885ee4410852df31c029"
     },
     {
       "path": "mentors/cv-6692dc07d65587d556b8/index.html",
-      "sha256": "f636a69ee9878a51478c7a2226c0e07f2c1db4d5a47d158a753f1398de4f6162"
+      "sha256": "96e570d2a9c45bca9f840eab1b9ba4c72601a6541c67c4d601df6b41f17e5e03"
     },
     {
       "path": "mentors/index.html",
-      "sha256": "3d9bc9a2708e1adf1984c2081dd24650ec7f20d51093b257064bd9e061aa1cfe"
+      "sha256": "d6997d8ba3beeb68c8cc9c0ee95ba57922f571b69c54d66b1b3e3e8fac2e2ab3"
     }
   ]
 }
